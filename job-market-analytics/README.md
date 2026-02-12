@@ -127,13 +127,14 @@ GROUP BY event_type;
 
 Designed for low-traffic portfolio deployment:
 
-  Service        Estimated Monthly Cost
-  -------------- ------------------------
-  S3             \< \$2
-  Lambda         Free Tier
-  Glue Catalog   \~\$1
-  Athena         \~\$1-2
-  **Total**      **\< \$10/month**
+| Service              | Estimated Monthly Cost |
+|----------------------|------------------------|
+| Amazon S3            | < $2                   |
+| AWS Lambda           | Free Tier              |
+| Glue Data Catalog    | ~$1                    |
+| Amazon Athena        | ~$1–2                  |
+| **Total Estimated**  | **< $10/month**        |
+
 
 ------------------------------------------------------------------------
 
