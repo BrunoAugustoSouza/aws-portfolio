@@ -114,11 +114,13 @@ Behavioral segmentation - Near real-time BI dashboards
 ## 🔎 Example Athena Query
 
 ``` sql
-SELECT event_type,
-       COUNT(*) AS total_events,
-       SUM(amount) AS total_revenue
-FROM processed_events
-GROUP BY event_type;
+SELECT 
+  company, 
+  COUNT(*) AS total_jobs
+FROM job_analytics.jobs
+GROUP BY company
+ORDER BY total_jobs DESC
+LIMIT 10;
 ```
 
 ------------------------------------------------------------------------
