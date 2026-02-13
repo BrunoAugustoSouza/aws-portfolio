@@ -53,10 +53,14 @@ This project simulates a **production-ready, serverless data lake
 architecture** designed for modern cloud-native companies in the US and
 EU.
 
-It demonstrates: - Event-driven ingestion - Columnar storage
-optimization (Parquet) - Data cataloging - SQL analytics -
-Infrastructure as Code (Terraform) - Cost-efficient serverless
-architecture
+It demonstrates: 
+
+- Event-driven ingestion;
+- Columnar storage optimization (Parquet);
+- Data cataloging;
+- SQL analytics;
+-Infrastructure as Code (Terraform);
+- Cost-efficient serverless architecture
 
 ------------------------------------------------------------------------
 
@@ -66,12 +70,11 @@ architecture
 
 ### 🔄 Data Flow
 
-1.  JSON events land in **S3 Raw Layer**
-2.  **S3 Event Trigger** invokes Lambda
-3.  Lambda transforms JSON → Parquet
-4.  Parquet stored in **S3 Processed Layer**
-5.  Glue Data Catalog registers schema
-6.  Athena enables SQL-based analytics
+1.  Evenbridge triggers Lambda event every x minutes
+2.  Lambda fetch data from public API, transforms JSON → Parquet
+3.  Raw stored and curated data stored on S3
+4.  Glue Data Catalog registers schema
+5.  Athena enables SQL-based analytics
 
 ------------------------------------------------------------------------
 
