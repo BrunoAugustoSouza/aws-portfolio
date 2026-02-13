@@ -83,8 +83,12 @@ It demonstrates:
 Simulates an **event-driven analytics pipeline** for a digital product
 company tracking user transactions and engagement.
 
-Example use cases: - Revenue tracking - Event frequency analysis -
-Behavioral segmentation - Near real-time BI dashboards
+Example use cases: 
+
+- Revenue tracking
+- Event frequency analysis
+- Behavioral segmentation
+- Near real-time BI dashboards
 
 ------------------------------------------------------------------------
 
