@@ -1,6 +1,6 @@
 resource "aws_cloudwatch_event_rule" "schedule" {
   name                = "job-ingestion-schedule"
-  schedule_expression = "rate(10 minutes)"
+  schedule_expression = "rate(30 minutes)"
 }
 
 resource "aws_cloudwatch_event_target" "lambda_target" {
