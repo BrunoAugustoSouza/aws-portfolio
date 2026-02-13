@@ -143,18 +143,6 @@ Designed for low-traffic portfolio deployment:
 | **Total Estimated**  | **< $10/month**        |
 
 
-------------------------------------------------------------------------
-
-## 🛠 Engineering Practices Demonstrated
-
-✔ Infrastructure as Code (Terraform)\
-✔ Serverless-first architecture\
-✔ Event-driven design\
-✔ Columnar data optimization (Parquet)\
-✔ Data lake layered modeling (raw → processed)\
-✔ IAM least privilege\
-✔ Cost-aware architecture decisions\
-✔ Cloud-native analytics stack
 
 ------------------------------------------------------------------------
 ## 👨‍💻 Author
