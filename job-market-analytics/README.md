@@ -24,8 +24,6 @@ This project demonstrates how to build a scalable, cost-efficient analytics back
 
 # 📊 What Can Be Done With This Project?
 
-Using this architecture, a company could:
-
 ## 💼 Job Market Monitoring
 
 - Track number of job postings per day
