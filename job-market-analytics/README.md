@@ -157,32 +157,6 @@ Designed for low-traffic portfolio deployment:
 ✔ Cloud-native analytics stack
 
 ------------------------------------------------------------------------
-
-## 🎯 Why This Project Attracts International Recruiters
-
-This portfolio project signals:
-
--   Real-world AWS architecture experience
--   Practical data modeling decisions
--   Understanding of cost-performance tradeoffs
--   DevOps + IaC maturity
--   Ability to design scalable, production-style systems
-
-It aligns directly with requirements for **Mid-Level Cloud Data Engineer
-roles** in international markets.
-
-------------------------------------------------------------------------
-
-## 🚀 Potential Enhancements
-
--   Partitioned Parquet by date
--   CloudWatch monitoring dashboard
--   CI/CD pipeline with GitHub Actions
--   Data quality validation layer
--   Step Functions orchestration
-
-------------------------------------------------------------------------
-
 ## 👨‍💻 Author
 
 AWS Data Engineering Portfolio Project\
