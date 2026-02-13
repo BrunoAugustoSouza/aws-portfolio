@@ -108,12 +108,13 @@ If you prefer 7zip:
 
 ------------------------------------------------------------------------
 
-## ✅ 7. save Layer on lambda folder
+## ✅ 7. Save Layer on lambda folder
 
 Save your layer.zip file inside lambda folder
 
-lambda/
+    lambda/
     │
     ├── handler.py
-    ├── layer.zip
+    └── layer.zip
+
 ------------------------------------------------------------------------
