@@ -101,7 +101,7 @@ Behavioral segmentation - Near real-time BI dashboards
 
 ``` json
 {
-  "ingestion_timestamp": 2026-02-12T21:38:20.390739,
+  "ingestion_timestamp": "2026-02-12T21:38:20.390739",
   "source": "themuse",
   "eventapi_page_type": 1,
   "results_count":20,
