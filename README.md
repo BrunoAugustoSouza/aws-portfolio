@@ -1,3 +1,8 @@
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![Python](https://img.shields.io/badge/Python-Data%20Engineering-blue)
+![Serverless](https://img.shields.io/badge/Architecture-Serverless-green)
+
+
 # 🚀 AWS Data Engineering Portfolio
 
 Production-oriented **AWS Data Engineering projects** designed to simulate real-world architectures used in international tech companies.
@@ -111,11 +116,3 @@ If you're a recruiter or hiring manager and would like to discuss my experience 
 
 ---
 
-## 🏷️ Badges (Optional)
-
-You may add these badges at the top of the README:
-
-```markdown
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
-![Python](https://img.shields.io/badge/Python-Data%20Engineering-blue)
-![Serverless](https://img.shields.io/badge/Architecture-Serverless-green)
