@@ -105,8 +105,9 @@ All projects are designed to:
 
 If you're a recruiter or hiring manager and would like to discuss my experience or projects:
 
-- LinkedIn: https://www.linkedin.com/in/your-profile
-- Email: your.email@example.com
+- LinkedIn: https://www.linkedin.com/in/brunoaugustosouza/
+- Email: bruno.augusto.souza@outlook.com
+- Cel: +55(11)97298-3578
 
 ---
 
