@@ -64,13 +64,20 @@ It demonstrates:
 
 ------------------------------------------------------------------------
 
+## How to use this project?
+
+You can follow a step by step [deployment guide here](DEPLOYMENT_GUIDE.md)
+
+------------------------------------------------------------------------
+
+
 ## 🏗 Architecture Diagram
 
 ![Architecture Diagram](architecture_diagram.png)
 
 ### 🔄 Data Flow
 
-1.  Evenbridge triggers Lambda event every x minutes
+1.  Evenbridge triggers Lambda event every 30 minutes
 2.  Lambda fetch data from public API, transforms JSON → Parquet
 3.  Raw and curated data are stored on S3 bucket
 4.  Glue Data Catalog registers schema
