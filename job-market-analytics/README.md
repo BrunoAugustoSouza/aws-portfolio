@@ -72,7 +72,7 @@ It demonstrates:
 
 1.  Evenbridge triggers Lambda event every x minutes
 2.  Lambda fetch data from public API, transforms JSON → Parquet
-3.  Raw stored and curated data stored on S3
+3.  Raw and curated data are stored on S3 bucket
 4.  Glue Data Catalog registers schema
 5.  Athena enables SQL-based analytics
 
