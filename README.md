@@ -56,9 +56,10 @@ Each project emphasizes:
 - Cost-optimized storage
 - Cloud-native monitoring
 
+Read about this project [here](job-market-analytics/README.md)
+
 ---
 
-Access my project [here](job-market-analytics/README.md)
 
 ## 📊 Engineering Principles Applied
 
