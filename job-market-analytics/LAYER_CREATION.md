@@ -7,8 +7,11 @@ containing:
 -   pandas
 -   fastparquet
 
-Using: - Windows - PowerShell - Docker (no need to install Python
-locally)
+Using: 
+
+- Windows
+- PowerShell 
+- Docker (no need to install Python locally)
 
 ------------------------------------------------------------------------
 
@@ -107,6 +110,10 @@ If you prefer 7zip:
 
 ## ✅ 7. save Layer on lambda folder
 
-Save your .zip layer file inside lambda folder
+Save your layer.zip file inside lambda folder
 
+lambda/
+    │
+    ├── handler.py
+    ├── layer.zip
 ------------------------------------------------------------------------
