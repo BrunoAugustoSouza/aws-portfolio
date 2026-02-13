@@ -58,6 +58,8 @@ Each project emphasizes:
 
 ---
 
+Access my project [here](job-market-analytics/README.md)
+
 ## 📊 Engineering Principles Applied
 
 - Data partitioning strategy
