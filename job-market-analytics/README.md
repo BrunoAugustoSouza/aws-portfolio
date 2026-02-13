@@ -97,18 +97,20 @@ Behavioral segmentation - Near real-time BI dashboards
 
 ------------------------------------------------------------------------
 
-## 📊 Example Input Event
+## 📊 Example Raw Data on S3
 
 ``` json
 {
-  "event_id": "evt_001",
-  "user_id": "u123",
-  "event_type": "purchase",
-  "amount": 49.90,
-  "event_timestamp": "2026-02-12T14:32:10Z"
+  "ingestion_timestamp": 2026-02-12T21:38:20.390739,
+  "source": "themuse",
+  "eventapi_page_type": 1,
+  "results_count":20,
+  "data": {...}
 }
 ```
+You can see a sample raw file here:
 
+👉 [View raw.json](example/s3/raw/jobs_20260212_213820.json)
 ------------------------------------------------------------------------
 
 ## 🔎 Example Athena Query
