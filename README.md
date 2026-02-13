@@ -46,10 +46,6 @@ Each project emphasizes:
 
 ## 📂 Projects
 
-### 1️⃣ Serverless Real-Time Job Market Analytics Pipeline
-
-**Architecture Overview**
-
 ![Architecture Diagram](job-market-analytics/architecture_diagram.png)
 
 **Key Features**
