@@ -50,7 +50,7 @@ Each project emphasizes:
 
 **Architecture Overview**
 
-Evenbridge → Lambda (public API) → S3 (Data Lake) → Athena / Redshift
+![Architecture Diagram](job-market-analytics/architecture_diagram.png)
 
 **Key Features**
 
