@@ -144,7 +144,7 @@ Designed for low-traffic portfolio deployment:
 | AWS Lambda           | Free Tier              |
 | Glue Data Catalog    | ~$1                    |
 | Amazon Athena        | ~$1–2                  |
-| **Total Estimated**  | **< $4/month**        |
+| **Total Estimated**  | **< $3/month**        |
 
 
 
