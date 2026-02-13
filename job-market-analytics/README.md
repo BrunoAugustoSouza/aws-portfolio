@@ -140,11 +140,11 @@ Designed for low-traffic portfolio deployment:
 
 | Service              | Estimated Monthly Cost |
 |----------------------|------------------------|
-| Amazon S3            | < $2                   |
+| Amazon S3            | ~$0                   |
 | AWS Lambda           | Free Tier              |
 | Glue Data Catalog    | ~$1                    |
 | Amazon Athena        | ~$1–2                  |
-| **Total Estimated**  | **< $10/month**        |
+| **Total Estimated**  | **< $4/month**        |
 
 
 
