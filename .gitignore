@@ -3,6 +3,11 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+
+ai-orchestrated-big-data-analytics-aws/work/*
+
+.aws-sam
+
 *.crc
 *.parquet
 *.pdf
