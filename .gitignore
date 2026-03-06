@@ -3,7 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 
-
+.terraform/
 ai-orchestrated-big-data-analytics-aws/work/*
 
 .aws-sam
