@@ -1,0 +1,7 @@
+{
+  "monitoringConfiguration": {
+    "s3MonitoringConfiguration": {
+      "logUri": "s3://ai-bigdata-nyc-tlc/logs/"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+        "year_month": ["2026-01"],
+        "trip_prefix": "raw/hvfhs",
+        "lookup_prefix": "aux"
+}

@@ -1,0 +1,6 @@
+{
+  "sparkSubmit": {
+    "entryPoint": "s3://ai-bigdata-nyc-tlc/jobs/hvfhs_analytics.py",
+    "entryPointArguments": ["ai-bigdata-nyc-tlc"]
+  }
+}

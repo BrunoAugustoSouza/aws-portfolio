@@ -1,0 +1,12 @@
+#running pyspark for debugging
+version: '3'
+
+services:
+  spark:
+    image: jupyter/pyspark-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
