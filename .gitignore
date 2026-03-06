@@ -6,6 +6,7 @@ __pycache__/
 .terraform/
 ai-orchestrated-big-data-analytics-aws/work/*
 
+ai-orchestrated-big-data-analytics-aws/**/*.zip
 .aws-sam
 
 *.crc
