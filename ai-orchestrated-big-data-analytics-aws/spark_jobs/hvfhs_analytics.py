@@ -18,9 +18,9 @@ spark.conf.set("spark.sql.adaptive.coalescePartitions.enabled", "true")
 
 BUCKET_NAME= sys.argv[1]
 
-input_path = f"s3://{BUCKET_NAME}/raw/hvfhs/"
-output_path = f"s3://{BUCKET_NAME}/curated/hvfhs_analytics_mart/"
-aux_path = f"s3://{BUCKET_NAME}/aux/taxi_zone_lookup.csv"
+input_path = f"s3://{BUCKET_NAME}/bronze/hvfhs/"
+output_path = f"s3://{BUCKET_NAME}/silver/"
+aux_path = f"s3://{BUCKET_NAME}/bronze/aux/taxi_zone_lookup.csv"
 
 df = (
     spark.read.parquet(input_path)
