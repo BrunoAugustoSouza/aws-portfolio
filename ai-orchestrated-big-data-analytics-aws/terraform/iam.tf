@@ -38,7 +38,7 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:DeleteObject"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/*"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/silver/*"
         ]
       },
 
@@ -49,7 +49,7 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:GetBucketLocation"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/silver/*"
         ]
       }
 
@@ -168,7 +168,7 @@ resource "aws_iam_policy" "emr_serverless_policy" {
           "s3:ListMultipartUploadParts"
         ]
         Resource = [
-          "arn:aws:s3:::${var.bucket_name}/curated/*"
+          "arn:aws:s3:::${var.bucket_name}/silver/*"
         ]
       },
 

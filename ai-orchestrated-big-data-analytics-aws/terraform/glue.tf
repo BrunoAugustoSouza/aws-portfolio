@@ -9,7 +9,7 @@ resource "aws_glue_crawler" "hvfhs_crawler" {
   database_name = aws_glue_catalog_database.analytics_db.name
 
   s3_target {
-    path = "s3://${aws_s3_bucket.data_lake.bucket}/curated/hvfhs_analytics_mart/"
+    path = "s3://${aws_s3_bucket.data_lake.bucket}/silver/"
   }
 
   schema_change_policy {
