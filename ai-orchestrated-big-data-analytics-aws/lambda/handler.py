@@ -50,15 +50,15 @@ def lambda_handler(event, context):
     Expected event:
     {
         "year_month": ["2026-01"],
-        "trip_prefix": "raw/hvfhs",
-        "lookup_prefix": "aux"
+        "trip_prefix": "bronze/hvfhs",
+        "lookup_prefix": "bronze/aux"
     }
     """
 
     try:
         year_month = event.get("year_month", ["2026-01"])
-        trip_prefix = event.get("trip_prefix", "raw/hvfhs")
-        lookup_prefix = event.get("lookup_prefix", "aux")
+        trip_prefix = event.get("trip_prefix", "bronze/hvfhs")
+        lookup_prefix = event.get("lookup_prefix", "bronze/aux")
 
         trip_files = download_trip_data_to_s3(year_month, trip_prefix)
         lookup_file = download_taxi_zone_lookup(lookup_prefix)
