@@ -4,8 +4,8 @@ resource "aws_glue_catalog_database" "analytics_db" {
 
 resource "aws_glue_crawler" "hvfhs_crawler" {
 
-  name = "hvfhs-analytics-crawler"
-  role = aws_iam_role.glue_role.arn
+  name          = "hvfhs-analytics-crawler"
+  role          = aws_iam_role.glue_role.arn
   database_name = aws_glue_catalog_database.analytics_db.name
 
   s3_target {

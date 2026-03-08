@@ -38,7 +38,7 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:DeleteObject"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/silver/*"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}"
         ]
       },
 
@@ -49,7 +49,7 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:GetBucketLocation"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/silver/*"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}"
         ]
       }
 
@@ -215,11 +215,11 @@ resource "aws_iam_role" "stepfn_role" {
     Version = "2012-10-17"
     Statement = [
       {
-      Effect = "Allow"
-      Principal = {
-        Service = "states.amazonaws.com"
-      }
-      Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = "states.amazonaws.com"
+        }
+        Action = "sts:AssumeRole"
     }]
   })
 }
@@ -265,6 +265,16 @@ resource "aws_iam_policy" "stepfn_policy" {
         Resource = "*"
       },
 
+      # Start Glue Crawler
+      {
+        Effect = "Allow"
+        Action = [
+          "glue:StartCrawler",
+          "glue:GetCrawler"
+        ]
+        Resource = "*"
+      },
+
       # Pass Role for EMR
       {
         Effect = "Allow"
@@ -274,7 +284,7 @@ resource "aws_iam_policy" "stepfn_policy" {
         Resource = "*"
       },
 
-      # CloudWatch Logs + X-Ray para Step Functions
+      # CloudWatch e  X-Ray para Step Functions
       {
         Effect = "Allow"
         Action = [
@@ -290,25 +300,35 @@ resource "aws_iam_policy" "stepfn_policy" {
           "xray:PutTraceSegments",
           "xray:PutTelemetryRecords",
           "xray:GetSamplingRules",
-          "xray:GetSamplingTargets",
-          "iam:PassRole"                # 🔑 ESSENCIAL para managed rules
+          "xray:GetSamplingTargets"
         ]
         Resource = "*"
       },
 
+      # CloudWatch Log Group
       {
-      "Effect": "Allow",
-      "Action": [
-      "events:PutRule",
-      "events:PutTargets",
-      "events:DeleteRule",
-      "events:RemoveTargets"
-      ],
-      "Resource": "*"
+        Effect = "Allow"
+        Action = [
+          "logs:CreateLogStream",
+          "logs:PutLogEvents"
+        ]
+        Resource = "${aws_cloudwatch_log_group.stepfn_logs.arn}:*"
+      },
+
+      {
+        "Effect" : "Allow",
+        "Action" : [
+          "events:PutRule",
+          "events:PutTargets",
+          "events:DeleteRule",
+          "events:RemoveTargets"
+        ],
+        "Resource" : "*"
       }
     ]
   })
 }
+
 
 resource "aws_iam_role_policy_attachment" "stepfn_attach" {
   role       = aws_iam_role.stepfn_role.name

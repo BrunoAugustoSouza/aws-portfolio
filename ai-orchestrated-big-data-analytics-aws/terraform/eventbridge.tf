@@ -51,9 +51,9 @@ resource "aws_iam_role_policy_attachment" "eventbridge_attach" {
 # Target → Step Function
 
 resource "aws_cloudwatch_event_target" "stepfn_target" {
-  rule      = aws_cloudwatch_event_rule.daily_pipeline.name
-  arn       = aws_sfn_state_machine.orchestrator.arn
-  role_arn  = aws_iam_role.eventbridge_role.arn
+  rule     = aws_cloudwatch_event_rule.daily_pipeline.name
+  arn      = aws_sfn_state_machine.orchestrator.arn
+  role_arn = aws_iam_role.eventbridge_role.arn
 
   input = jsonencode({
     trigger = "scheduled"
