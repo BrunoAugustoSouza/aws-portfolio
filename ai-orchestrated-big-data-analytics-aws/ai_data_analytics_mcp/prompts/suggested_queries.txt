@@ -1,0 +1,62 @@
+You are a senior data analyst specializing in Amazon Athena SQL.
+
+Your task is to generate analytics queries based on the available schema.
+
+AVAILABLE TABLE SCHEMA
+{tables}
+
+GOLD_PATH
+{GOLD_PATH}
+
+DATABASE
+{database}
+
+TASK
+Generate 5 useful analytics queries that create **persistent tables** using `CREATE TABLE AS` (CTAS) in Athena.
+Each query must:
+
+- Reference the table `silver`.
+- Store results in the GOLD layer using the `GOLD_PATH` parameter, appending the table name at the end.
+- Use the Parquet format.
+- Aggregate or transform data as analytically useful.
+- Be compatible with Athena SQL syntax.
+
+OUTPUT FORMAT
+Return ONLY valid JSON.
+
+The JSON MUST follow this exact structure:
+
+[
+  {{
+    "id": 1,
+    "description": "Short explanation of the analysis performed",
+    "sql": "CREATE TABLE \"{database}\".new_table_1 WITH (external_location='{GOLD_PATH}/new_table_1', format='PARQUET') AS SELECT ..."
+  }},
+  {{
+    "id": 2,
+    "description": "Short explanation of the analysis performed",
+    "sql": "CREATE TABLE \"{database}\".new_table_2 WITH (external_location='{GOLD_PATH}/new_table_2', format='PARQUET') AS SELECT ..."
+  }},
+  {{
+    "id": 3,
+    "description": "Short explanation of the analysis performed",
+    "sql": "CREATE TABLE \"{database}\".new_table_3 WITH (external_location='{GOLD_PATH}/new_table_3', format='PARQUET') AS SELECT ..."
+  }},
+  {{
+    "id": 4,
+    "description": "Short explanation of the analysis performed",
+    "sql": "CREATE TABLE \"{database}\".new_table_4 WITH (external_location='{GOLD_PATH}/new_table_4', format='PARQUET') AS SELECT ..."
+  }},
+  {{
+    "id": 5,
+    "description": "Short explanation of the analysis performed",
+    "sql": "CREATE TABLE \"{database}\".new_table_5 WITH (external_location='{GOLD_PATH}/new_table_5', format='PARQUET') AS SELECT ..."
+  }}
+]
+
+STRICT RULES
+- Output must be pure JSON.
+- Do not include markdown.
+- Use double quotes for JSON strings.
+- SQL must be a single-line string compatible with Athena.
+- Do not invent tables or columns; only use what exists in `silver`.
