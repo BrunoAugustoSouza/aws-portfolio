@@ -1,5 +1,5 @@
 resource "aws_glue_catalog_database" "analytics_db" {
-  name = "nyc_tlc_analytics"
+  name = "nyc_hvfhs_analytics_lakehouse"
 }
 
 resource "aws_glue_crawler" "hvfhs_crawler" {
