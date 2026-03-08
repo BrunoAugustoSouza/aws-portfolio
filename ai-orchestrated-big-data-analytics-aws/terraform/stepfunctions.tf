@@ -151,9 +151,9 @@ resource "aws_sfn_state_machine" "orchestrator" {
   ]
 
 
-  logging_configuration {
-    log_destination        = "${aws_cloudwatch_log_group.stepfn_logs.arn}:*"
-    include_execution_data = true
-    level                  = "ALL"
-  }
+  #logging_configuration {
+  #  log_destination        = "${aws_cloudwatch_log_group.stepfn_logs.arn}:*"
+  #  include_execution_data = true
+  #  level                  = "ALL"
+  #}
 }
