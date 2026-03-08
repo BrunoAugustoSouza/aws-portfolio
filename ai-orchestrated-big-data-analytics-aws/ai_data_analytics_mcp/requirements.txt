@@ -1,6 +1,6 @@
 langchain
 langchain-openai
-langchain-core
 boto3
-python-dotenv
 pandas
+python-dotenv
+ipdb
