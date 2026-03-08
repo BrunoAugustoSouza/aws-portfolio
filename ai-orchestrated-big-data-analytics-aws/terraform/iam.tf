@@ -38,7 +38,7 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:DeleteObject"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/*"
         ]
       },
 
@@ -49,13 +49,14 @@ resource "aws_iam_policy" "glue_s3_policy" {
           "s3:GetBucketLocation"
         ]
         Resource = [
-          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}"
+          "arn:aws:s3:::${aws_s3_bucket.data_lake.bucket}/*"
         ]
       }
 
     ]
   })
 }
+
 resource "aws_iam_role_policy_attachment" "glue_s3_attach" {
   role       = aws_iam_role.glue_role.name
   policy_arn = aws_iam_policy.glue_s3_policy.arn
