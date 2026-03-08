@@ -1,5 +1,7 @@
 import os
 from dotenv import load_dotenv
+load_dotenv()
+
 
 DATABASE_NAME = "nyc_taxi_analytics_lakehouse"
 BUCKET_NAME = "ai-bigdata-lakehouse"

@@ -1,8 +1,9 @@
-import time
 from aws_clients import get_athena_client
 from config import DATABASE_NAME, ATHENA_OUTPUT
+import time
 
 athena = get_athena_client()
+
 
 def execute_query(sql):
 
@@ -30,8 +31,5 @@ def execute_query(sql):
             break
 
         time.sleep(3)
-
-    if state != "SUCCEEDED":
-        raise Exception(f"Athena query failed: {state}")
 
     return query_id

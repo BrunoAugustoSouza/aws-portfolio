@@ -1,6 +1,7 @@
 from config import GOLD_PATH
 
-def build_ctas_query(table_name, sql_body, dataset_name):
+
+def build_ctas_query(sql_body, dataset_name):
 
     ctas_query = f"""
     CREATE TABLE {dataset_name}

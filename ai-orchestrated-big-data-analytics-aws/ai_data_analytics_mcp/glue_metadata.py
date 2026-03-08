@@ -1,7 +1,8 @@
-from config import DATABASE_NAME, REGION
 from aws_clients import get_glue_client
+from config import DATABASE_NAME
 
 glue = get_glue_client()
+
 
 def get_glue_metadata():
 
@@ -17,7 +18,7 @@ def get_glue_metadata():
         ]
 
         tables.append({
-            "table_name": table["Name"],
+            "table": table["Name"],
             "columns": columns
         })
 
