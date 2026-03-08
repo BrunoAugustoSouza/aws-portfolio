@@ -248,7 +248,9 @@ Example IAM Policy:
       "Action": [
         "glue:GetDatabase",
         "glue:GetTables",
-        "glue:GetTable"
+        "glue:GetTable",
+        "glue:GetPartitions",
+        "glue:CreateTable"
       ],
       "Resource": "*"
     },
@@ -266,7 +268,9 @@ Example IAM Policy:
       "Action": [
         "s3:GetObject",
         "s3:PutObject",
-        "s3:ListBucket"
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:DeleteObject"
       ],
       "Resource": [
         "arn:aws:s3:::<BUCKET_NAME>",
