@@ -85,7 +85,7 @@ End-to-end **serverless big data pipeline** processing real-world ride-sharing d
 
 
 ```mermaid
-flowchart TD
+flowchart LR
 
 A[Raw Data<br>AWS Lambda] --> B[S3 Data Lake<br>Bronze Layer]
 
