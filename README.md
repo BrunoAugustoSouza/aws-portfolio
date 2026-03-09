@@ -269,7 +269,7 @@ https://www.linkedin.com/in/brunoaugustosouza/
 bruno.augusto.souza@outlook.com
 
 **Phone**  
-+55 (11) 97298-3578 ([Call me on Whatsapp](https://wa.me/5511972983578))
++55 (11) 97298-3578 ([Open a chat on Whatsapp](https://wa.me/5511972983578))
 
 ---
 
