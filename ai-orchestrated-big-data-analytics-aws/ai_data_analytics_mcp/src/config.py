@@ -11,3 +11,6 @@ GOLD_PATH = f"s3://{BUCKET_NAME}/gold"
 REGION = os.getenv("AWS_REGION")
 PROMPT_SUGGEST_PATH = "prompts/suggested_queries.txt"
 OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
+
+AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET = os.getenv("AWS_SECRET_ACCESS_KEY")
