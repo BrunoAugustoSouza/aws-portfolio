@@ -24,7 +24,20 @@ platforms are built in real-world tech companies**, focusing on:
 
 Data flows through a multi-layer **lakehouse-style pipeline**.
 
-Raw Data (Lambda ingestion) → S3 Data Lake (Bronze Layer) → Apache Spark Transformations (EMR Serverless) → Curated Dataset (Silver Layer) → AI-Powered Analytics Engine (MCP + LLM) → Analytics Tables (Gold Layer)
+```mermaid
+flowchart LR
+
+A[Raw Data<br>AWS Lambda] --> B[S3 Data Lake<br>Bronze Layer]
+
+B --> C[Spark Processing<br>EMR Serverless]
+
+C --> D[Curated Data<br>Silver Layer]
+
+D --> E[AI Analytics Engine<br>MCP + LLM]
+
+E --> F[Analytics Tables<br>Gold Layer]
+
+```
 
 ------------------------------------------------------------------------
 
