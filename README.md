@@ -248,7 +248,7 @@ Techniques applied:
 
 Read more about [here](job-market-analytics/README.md)
 
---
+---
 
 # 📊 Engineering Practices Demonstrated
 
