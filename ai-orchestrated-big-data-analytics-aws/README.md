@@ -1,153 +1,259 @@
-# 🚕 NYC TLC Big Data Analytics Platform
+# AI-Orchestrated Big Data Analytics Pipeline (AWS)
 
-**EMR Serverless + Step Functions + Spark (Cost-Optimized Production
-Architecture)**
+## Overview
 
-------------------------------------------------------------------------
+This project demonstrates a **production-style, serverless big data
+analytics pipeline** built on AWS.
 
-## 📌 Project Overview
+It processes large-scale ride-sharing trip datasets using a **modern
+Data Lake architecture (Bronze → Silver → Gold)** and integrates
+**AI-assisted analytics using AWS MCP + LLMs**.
 
-This project demonstrates a **production-style big data analytics
-platform** built using:
+The goal of this project is to simulate how **modern cloud data
+platforms are built in real-world tech companies**, focusing on:
 
--   **Amazon EMR Serverless (Apache Spark)**
--   **AWS Step Functions (Workflow Orchestration)**
--   **Amazon S3 (Data Lake)**
--   **NYC TLC HVFHS Trip Data (Real-world dataset)**
-
-The system processes large-scale ride-hailing trip data (Uber, Lyft,
-Via, etc.) and produces a **single unified analytics table** optimized
-for BI tools and downstream analytics.
-
-Designed for: - Big Data Engineering roles - Data Platform Engineering -
-Analytics Engineering - Cloud Data Architecture
+-   Scalable data pipelines
+-   Serverless big data processing
+-   Data lake architecture
+-   Infrastructure as Code
+-   Cost-efficient analytics platforms
 
 ------------------------------------------------------------------------
 
-## 🏗️ Architecture
+# Architecture
 
-Raw Data (S3 Bronze) ↓ Spark Transformations (EMR Serverless) ↓ Curated
-Analytics Table (S3 Silver/Gold) ↓ BI / Athena / Dashboard
+Data flows through a multi-layer **lakehouse-style pipeline**.
 
-Orchestrated with AWS Step Functions
-
-------------------------------------------------------------------------
-
-## 📊 Dataset
-
-Source: NYC Taxi & Limousine Commission (TLC)
-
-High Volume For-Hire Vehicle (HVFHS) trip records including: - Uber
-(HV0003) - Lyft (HV0005) - Via (HV0004) - Juno (HV0002)
-
-Schema includes: - Pickup & dropoff timestamps - Trip distance &
-duration - Fare breakdown (tax, tolls, congestion fees, airport fees) -
-Driver pay - Shared ride flags - Wheelchair accessibility indicators
+Raw Data (Lambda ingestion) → S3 Data Lake (Bronze Layer) → Apache Spark Transformations (EMR Serverless) → Curated Dataset (Silver Layer) → AI-Powered Analytics Engine (MCP + LLM) → Analytics Tables (Gold Layer)
 
 ------------------------------------------------------------------------
 
-## 🔎 Key Business Questions Answered
+# Core Technologies
 
-The Spark pipeline generates a **unified analytics table** answering:
+### AWS Services
 
--   📈 Revenue by company (Uber vs Lyft vs Via)
--   🗓️ Peak demand hours & weekdays
--   🚗 Average trip distance and duration
--   💰 Driver earnings vs passenger fare trends
--   🏙️ Most profitable pickup/dropoff zones
--   🛫 Airport trip revenue impact
--   ♿ WAV (wheelchair-accessible vehicle) usage trends
--   👥 Shared ride penetration rate
+-   AWS Lambda -- Data ingestion
+-   Amazon S3 -- Data lake storage
+-   Amazon EMR Serverless -- Distributed Spark processing
+-   AWS Step Functions -- Workflow orchestration
+-   AWS Glue -- Data catalog & crawler
+-   AWS Athena -- Serverless SQL analytics
+
+### Data Engineering Stack
+
+-   Python
+-   Apache Spark
+-   PySpark
+-   SQL
+-   Parquet data format
+
+### Infrastructure
+
+-   Terraform (Infrastructure as Code)
+
+### AI Integration
+
+-   AWS MCP
+-   LLM-assisted analytics generation
 
 ------------------------------------------------------------------------
 
-## 🧠 Data Engineering Highlights
+# Dataset
 
-✔ Partitioned by `year` and `month` for cost-efficient querying\
-✔ Column pruning & optimized Spark transformations\
-✔ EMR Serverless auto-scaling for minimal idle cost\
-✔ Step Functions orchestration for production workflow\
-✔ Designed to process large Parquet datasets efficiently
+Source:
+
+NYC Taxi & Limousine Commission (TLC)
+
+Dataset:
+
+**High Volume For-Hire Vehicle (HVFHS) trip records** including:
+
+-   Uber (HV0003)
+-   Lyft (HV0005)
+-   Via (HV0004)
+-   Juno (HV0002)
+
+Trip schema includes:
+
+-   Pickup & dropoff timestamps
+-   Trip distance
+-   Trip duration
+-   Fare breakdown
+-   Driver pay
+-   Shared ride flags
+-   Wheelchair accessibility indicators
 
 ------------------------------------------------------------------------
 
-## 💰 Cost Optimization Strategy
+# Pipeline Workflow
 
--   EMR Serverless (no idle cluster costs)
--   Auto-stop after job completion
+The entire pipeline is orchestrated using **AWS Step Functions**.
+
+## Step 1 --- Data Ingestion
+
+A **Lambda function downloads raw trip datasets** and stores them in:
+
+S3 Bronze Layer
+
+## Step 2 --- Spark Processing
+
+An **EMR Serverless Spark job** performs:
+
+-   Data cleaning
+-   Feature engineering
+-   Aggregations
+-   Partitioning by year and month
+
+Output:
+
+S3 Silver Layer (Parquet)
+
+## Step 3 --- Metadata Catalog
+
+AWS Glue Crawler automatically:
+
+-   Detects schema
+-   Updates the Data Catalog
+-   Enables SQL querying
+
+## Step 4 --- Analytics Query Layer
+
+Athena queries enable exploration of the dataset.
+
+## Step 5 --- AI-Powered Analytics
+
+A separate Python application integrates **AWS MCP + LLM** to:
+
+1.  Read Glue Catalog tables
+2.  Suggest business analytics queries
+3.  Allow the user to select insights
+4.  Automatically generate **Gold Layer datasets**
+
+------------------------------------------------------------------------
+
+# Business Questions Answered
+
+The pipeline produces analytics such as:
+
+-   Revenue comparison across ride-sharing companies
+-   Peak demand hours and weekdays
+-   Average trip distance and duration
+-   Driver earnings vs passenger fares
+-   Most profitable pickup and dropoff zones
+-   Airport trip revenue impact
+-   Wheelchair-accessible vehicle usage trends
+-   Shared ride adoption rates
+
+------------------------------------------------------------------------
+
+# Data Engineering Highlights
+
+-   Partitioned Parquet datasets
+-   Spark transformations optimized with column pruning
+-   EMR Serverless auto-scaling
+-   Serverless workflow orchestration
+-   Glue metadata catalog automation
+-   SQL analytics via Athena
+-   AI-assisted analytics generation
+
+------------------------------------------------------------------------
+
+# Cost Optimization Strategy
+
+The architecture is designed to minimize cloud costs.
+
+Techniques used:
+
+-   Serverless Spark processing
+-   No always-on clusters
 -   Partitioned Parquet storage
--   No always-on infrastructure
--   Fully serverless orchestration
+-   On-demand compute
+-   Auto-scaling workloads
 
-Estimated cost for demo-scale runs: **very low (few dollars per run)**
+Estimated demo pipeline cost:
 
-------------------------------------------------------------------------
-
-## 🚀 How to Run
-
-1.  Upload raw TLC data to S3
-2.  Deploy Step Functions state machine
-3.  Configure EMR Serverless application
-4.  Trigger workflow execution
-5.  Query curated analytics table via Athena or Spark
+≈ **\$0.04 per run**
 
 ------------------------------------------------------------------------
 
-## 📂 Output: Unified Analytics Table
+# Infrastructure Deployment
 
-Final dataset includes:
+Infrastructure is provisioned using **Terraform**.
 
--   company_name
--   year, month, pickup_hour
--   total_trips
--   total_revenue
--   total_driver_pay
--   avg_trip_miles
--   avg_trip_minutes
--   shared_trip_rate
--   wav_trip_rate
+To deploy:
 
-Optimized for: - Power BI - Tableau - Amazon QuickSight - Athena SQL
-queries
+``` bash
+cd terraform
+terraform init
+terraform apply
+```
+
+This creates:
+
+-   Data Lake (S3)
+-   EMR Serverless application
+-   Lambda ingestion function
+-   Step Functions workflow
+-   Glue crawler
+-   IAM roles
 
 ------------------------------------------------------------------------
 
-## 🎯 Why This Project Stands Out for Recruiters
+# Running the Pipeline
+
+After infrastructure deployment:
+
+1.  Open **AWS Step Functions**
+2.  Run the state machine
+3.  The pipeline will automatically:
+
+-   Ingest raw data
+-   Run Spark transformations
+-   Update Glue catalog
+-   Prepare the dataset for analytics
+
+------------------------------------------------------------------------
+
+# AI Analytics Layer
+
+Inside the project directory:
+
+    ai_data_analytics_mcp/
+
+Run:
+
+``` bash
+uv run main.py
+```
+
+The system will:
+
+1.  Read the Glue catalog
+2.  Suggest analytics queries using AI
+3.  Let the user select insights
+4.  Generate **Gold Layer Parquet datasets**
+
+P.S. to install uv read more about it on this (documentation)[docs/uv_instalation.md]
+
+------------------------------------------------------------------------
+
+# Engineering Principles
 
 This project demonstrates:
 
--   Real-world large dataset processing
--   Serverless big data architecture
--   Production-style orchestration
--   Cost-aware engineering decisions
--   Scalable Spark transformation design
--   Business-oriented analytics modeling
-
-It shows both **technical depth** and **architectural maturity**.
+-   Data lake architecture design
+-   Distributed data processing
+-   Cloud-native pipelines
+-   Infrastructure as Code
+-   Scalable analytics platforms
+-   Cost-efficient serverless architecture
 
 ------------------------------------------------------------------------
 
-## 🛠️ Tech Stack
+# Author
 
--   AWS EMR Serverless
--   Apache Spark (PySpark)
--   AWS Step Functions
--   Amazon S3
--   NYC TLC Open Data
+Bruno Augusto Souza
 
-------------------------------------------------------------------------
+LinkedIn: https://www.linkedin.com/in/brunoaugustosouza/
 
-## 📌 Future Enhancements
-
--   Add incremental processing (monthly partitions)
--   Add data quality checks
--   Implement CI/CD for Spark jobs
--   Add dashboard layer
--   Integrate data catalog automation
-
-------------------------------------------------------------------------
-
-## 👤 Author
-
-Big Data Engineering Portfolio Project\
-Focused on scalable, serverless, cost-efficient cloud data platforms.
+Email: bruno.augusto.souza@outlook.com
