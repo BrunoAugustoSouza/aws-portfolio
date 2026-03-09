@@ -11,6 +11,7 @@ ai-orchestrated-big-data-analytics-aws/**/*.zip
 
 *.crc
 *.parquet
+!ai-orchestrated-big-data-analytics-aws/output_sample/*.parquet
 *.pdf
 _SUCCESS
 
