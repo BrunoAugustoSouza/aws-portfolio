@@ -84,14 +84,19 @@ End-to-end **serverless big data pipeline** processing real-world ride-sharing d
 ### Architecture
 
 Raw Data (Lambda)
+
 ↓
 S3 Data Lake (Bronze)
+
 ↓
 Spark Processing (EMR Serverless)
+
 ↓
 Curated Layer (Silver)
+
 ↓
 AI Analytics Engine (MCP + LLM)
+
 ↓
 Analytics Tables (Gold)
 
