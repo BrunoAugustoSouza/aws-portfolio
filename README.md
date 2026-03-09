@@ -246,7 +246,7 @@ Techniques applied:
 4.  Glue Data Catalog registers schema
 5.  Athena enables SQL-based analytics
 
-Read more about (here)[job-market-analytics/README.md]
+Read more about [here](job-market-analytics/README.md)
 
 --
 
