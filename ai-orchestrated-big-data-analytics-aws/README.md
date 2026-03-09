@@ -233,7 +233,7 @@ The system will:
 3.  Let the user select insights
 4.  Generate **Gold Layer Parquet datasets**
 
-P.S. to install uv read more about it on this (documentation)[docs/uv_instalation.md]
+P.S. to install uv read more about it on this [documentation](docs/uv_instalation.md)
 
 ------------------------------------------------------------------------
 
