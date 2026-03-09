@@ -25,17 +25,34 @@ platforms are built in real-world tech companies**, focusing on:
 Data flows through a multi-layer **lakehouse-style pipeline**.
 
 ```mermaid
+
 flowchart LR
 
-A[Raw Data<br>AWS Lambda] --> B[S3 Data Lake<br>Bronze Layer]
+subgraph Ingestion
+A[EventBridge<br>Scheduler]
+B[AWS Lambda<br>Raw Data Collector]
+end
 
-B --> C[Spark Processing<br>EMR Serverless]
+subgraph DataLake
+C[S3 Data Lake<br>Bronze Layer]
+F[S3 Curated Data<br>Silver Layer]
+K[S3 Analytics Tables<br>Gold Layer]
+end
 
-C --> D[Curated Data<br>Silver Layer]
+subgraph Processing
+D[EMR Serverless<br>Spark Processing]
+end
 
-D --> E[AI Analytics Engine<br>MCP + LLM]
+subgraph AI
+I[AI Analytics Engine<br>MCP + LLM]
+end
 
-E --> F[Analytics Tables<br>Gold Layer]
+A --> B
+B --> C
+C --> D
+D --> F
+F --> I
+I --> K
 
 ```
 
