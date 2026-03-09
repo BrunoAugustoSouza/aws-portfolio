@@ -1,234 +1,256 @@
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
-![Python](https://img.shields.io/badge/Python-Data%20Engineering-blue)
-![Serverless](https://img.shields.io/badge/Architecture-Serverless-green)
+<!-- ===================== BADGES ===================== -->
 
+<p align="center">
+
+<img src="https://img.shields.io/badge/AWS-Cloud%20Data%20Engineering-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"/>
+<img src="https://img.shields.io/badge/Python-Data%20Pipelines-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/Architecture-Serverless-34A853?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Infrastructure-Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white"/>
+<img src="https://img.shields.io/badge/Data%20Lake-S3%20Architecture-569A31?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Big%20Data-Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
+
+</p>
+
+---
 
 # 🚀 AWS Data Engineering Portfolio
 
-Production-oriented **AWS Data Engineering projects** designed to simulate real-world architectures used in international tech companies.
+Production-oriented **AWS Data Engineering projects** demonstrating how modern data platforms are built in **cloud-native environments**.
 
-This repository demonstrates hands-on experience with scalable data pipelines, serverless processing, data lakes, real-time ingestion, and cloud-native analytics solutions built on AWS.
+Focus areas:
+
+- **ETL / ELT pipelines**
+- **Serverless data platforms**
+- **Big data processing**
+- **Data lake architecture**
+- **Infrastructure as Code**
+- **Cost-efficient cloud analytics**
+
+Designed to simulate **real-world architectures used by global tech companies.**
 
 ---
 
-## 🎯 Objective
+# 🎯 Portfolio Goals
 
-To showcase practical, cost-efficient, and production-ready AWS data engineering solutions aligned with global hiring standards (US/EU market).
+This repository demonstrates practical experience building **scalable cloud data systems** using AWS.
 
 Each project emphasizes:
 
-- Scalability
-- Reliability
-- Cost optimization
-- Infrastructure best practices
-- Clear architecture documentation
-- Clean and modular code
+✔ Scalable architectures  
+✔ Production-grade pipelines  
+✔ Cost-efficient serverless design  
+✔ Infrastructure automation  
+✔ Clean Python engineering  
 
 ---
 
-## 🏗️ Core Technologies
+# 🧰 Core Tech Stack
 
-- **AWS S3** – Data Lake Storage  
-- **AWS Lambda** – Serverless processing  
-- **AWS Glue** – ETL & Data Catalog  
-- **AWS Kinesis / Firehose** – Real-time ingestion  
-- **Amazon Redshift** – Data Warehouse  
-- **Amazon Athena** – Serverless querying  
-- **Amazon RDS (PostgreSQL)** – Relational storage  
-- **DynamoDB** – NoSQL storage  
-- **AWS IAM** – Security & access control  
-- **Amazon CloudWatch** – Monitoring & logging  
-- **Terraform / CloudFormation** – Infrastructure as Code  
-- **Python (Boto3, Pandas, PySpark)**  
-- **SQL**
+### ☁️ Cloud Platform
 
----
+![AWS](https://img.shields.io/badge/Amazon_Web_Services-Cloud_Platform-FF9900?style=flat&logo=amazonaws)
 
-## 📂 Projects
+### 🧠 Data Engineering
 
-![Architecture Diagram](job-market-analytics/architecture_diagram.png)
+![Spark](https://img.shields.io/badge/Apache_Spark-Big_Data-E25A1C?style=flat&logo=apachespark)
+![ETL](https://img.shields.io/badge/ETL-Pipelines-blue?style=flat)
+![DataLake](https://img.shields.io/badge/Data_Lake-S3-green?style=flat)
 
-**Key Features**
+### ⚙️ Infrastructure
 
-- Near real-time ingestion
-- Event-driven architecture
-- Partitioned data lake design
-- Cost-optimized storage
-- Cloud-native monitoring
+![Terraform](https://img.shields.io/badge/Terraform-Infrastructure_as_Code-623CE4?style=flat&logo=terraform)
+![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?style=flat&logo=docker)
 
-Read more about this project [here](job-market-analytics/README.md)
+### 🗄️ Storage & Databases
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Relational_DB-316192?style=flat&logo=postgresql)
+![DynamoDB](https://img.shields.io/badge/DynamoDB-NoSQL_DB-4053D6?style=flat&logo=amazondynamodb)
+
+### 🧪 Programming
+
+![Python](https://img.shields.io/badge/Python-Data_Engineering-3776AB?style=flat&logo=python)
+![SQL](https://img.shields.io/badge/SQL-Analytics-blue?style=flat)
 
 ---
 
-## 🧠 AI-Powered Big Data Analytics Pipeline (AWS)
+# 📂 Featured Projects
 
-**End-to-end serverless data engineering pipeline** processing large-scale ride-sharing trip datasets using AWS cloud-native services.
+---
+
+# 🧠 AI-Orchestrated Big Data Analytics Pipeline
+
+End-to-end **serverless big data pipeline** processing real-world ride-sharing datasets.
 
 ### Architecture
 
-Raw Data → **S3 Bronze Layer** → **Spark Transformations (EMR Serverless)** → **Silver Layer** → **AI-powered analytics (MCP + LLM)** → **Gold Layer**
+Raw Data (Lambda)
+↓
+S3 Data Lake (Bronze)
+↓
+Spark Processing (EMR Serverless)
+↓
+Curated Layer (Silver)
+↓
+AI Analytics Engine (MCP + LLM)
+↓
+Analytics Tables (Gold)
+
 
 ### Technologies
 
-- AWS Lambda
-- Amazon S3 (Data Lake)
-- Amazon EMR Serverless (Apache Spark)
-- AWS Step Functions (Workflow Orchestration)
-- AWS Glue Data Catalog
-- AWS Athena
-- Terraform (Infrastructure as Code)
-- AWS MCP integrated with AI for analytics automation
+![Lambda](https://img.shields.io/badge/AWS_Lambda-Serverless-FF9900?style=flat&logo=awslambda)
+![S3](https://img.shields.io/badge/Amazon_S3-Data_Lake-569A31?style=flat&logo=amazons3)
+![EMR](https://img.shields.io/badge/EMR_Serverless-Spark_Processing-FF9900?style=flat)
+![StepFunctions](https://img.shields.io/badge/Step_Functions-Orchestration-FF9900?style=flat)
+![Glue](https://img.shields.io/badge/AWS_Glue-Data_Catalog-FF9900?style=flat)
+![Athena](https://img.shields.io/badge/Athena-Serverless_SQL-FF9900?style=flat)
+![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?style=flat)
 
 ### Dataset
 
-**NYC Taxi & Limousine Commission – HVFHS Trip Data**
+**NYC Taxi & Limousine Commission – HVFHS**
 
-Includes ride-sharing data from:
+Ride-sharing trip data from:
 
 - Uber
 - Lyft
 - Via
 - Juno
 
-Trip records include:
+Includes:
 
-- Pickup and dropoff timestamps
-- Trip distance and duration
-- Fare breakdown
-- Driver pay
-- Shared ride indicators
-- Wheelchair accessibility flags
+- trip distance
+- timestamps
+- fare breakdown
+- driver earnings
+- shared rides
+- wheelchair accessibility
 
-### Key Analytics Questions Answered
+---
 
-The pipeline generates a **unified analytics dataset** answering:
+### Analytics Produced
 
-- 📈 Revenue comparison across ride-hailing companies
-- 🗓️ Peak demand hours and busiest weekdays
-- 🚗 Average trip distance and duration
-- 💰 Driver earnings vs passenger fare trends
-- 🏙️ Most profitable pickup and dropoff zones
-- 🛫 Airport trip revenue impact
-- ♿ Wheelchair-accessible vehicle usage
-- 👥 Shared ride penetration rates
+The pipeline generates analytics answering:
 
-### Data Engineering Highlights
+📈 Revenue by company  
+🗓️ Peak demand hours  
+🚗 Average trip distance & duration  
+💰 Driver earnings vs fares  
+🏙️ Most profitable zones  
+🛫 Airport trip impact  
+♿ Accessibility usage  
+👥 Shared ride adoption  
 
-- Partitioned Parquet data (`year`, `month`) for **cost-efficient querying**
-- **Apache Spark transformations** optimized with column pruning
-- **EMR Serverless auto-scaling** to eliminate idle cluster costs
-- **AWS Step Functions orchestration** for production-style pipelines
-- Automated **metadata cataloging with AWS Glue**
-- SQL analytics using **AWS Athena**
-- AI-driven **query generation and analytics automation**
+---
 
-### Cost Optimization Strategy
+### Engineering Highlights
 
-Designed as a **fully serverless big data architecture**.
+✔ **Partitioned Parquet datasets** (`year/month`)  
+✔ **Spark optimizations** with column pruning  
+✔ **Serverless EMR autoscaling**  
+✔ **Step Functions orchestration**  
+✔ **Glue metadata catalog**  
+✔ **Athena analytics queries**  
+✔ **AI-assisted data exploration**
 
-- No always-on clusters
-- Auto-scaling Spark compute
-- Partitioned Parquet storage
-- Serverless workflow orchestration
+📖 Project details →  
+`ai-orchestrated-big-data-analytics-aws/README.md`
 
-Estimated demo run cost:
+---
 
-**~$0.04 per pipeline execution**
+# 🤖 AI Data Lake Analytics Engine
 
-### ⚙️ Infrastructure as Code Data Platform
+Experimental **AI-driven data analytics layer** using **AWS MCP + LLM integration**.
 
-Provisioned the entire data platform above using **Terraform**.
+### Workflow
 
-Infrastructure includes:
+1️⃣ Read table metadata from **Glue Catalog**  
+2️⃣ AI suggests possible analytics queries  
+3️⃣ User selects the analysis  
+4️⃣ System generates **Gold Layer datasets**
 
-- Data lake storage
-- Spark compute environment
-- Step Functions orchestration
-- Glue catalog
-- IAM roles and permissions
-- Lambda ingestion pipeline
+Output:
+
+**Analytics tables automatically generated in Parquet.**
+
+📖 Documentation →  
+`ai_data_analytics_mcp/README_AI_MCP_Lakehouse.md`
+
+---
+
+# ⚙️ Infrastructure as Code
+
+Entire platform provisioned using **Terraform**.
+
+Includes:
+
+- Data Lake infrastructure
+- EMR Serverless environment
+- Step Functions workflows
+- Glue Data Catalog
+- IAM roles & permissions
+- Lambda ingestion
 
 Benefits:
 
-- Fully reproducible infrastructure
-- Version-controlled cloud architecture
-- Rapid environment provisioning
-
-Read more about this project [here](ai-orchestrated-big-data-analytics-aws/README.md)
+✔ Fully reproducible infrastructure  
+✔ Version-controlled cloud architecture  
+✔ Fast environment deployment  
 
 ---
 
-## 🤖 AI-Powered Data Analytics Layer
+# 💰 Cost Optimization Strategy
 
-Built an experimental **AI-assisted analytics layer** using **AWS MCP + LLM integration**.
+All architectures prioritize **low operational cost**.
 
-Workflow:
+Techniques applied:
 
-1. Python application reads the **Glue catalog table**
-2. AI suggests **analytics queries automatically**
-3. User selects the analysis
-4. The system generates a **Gold Layer analytics dataset (Parquet)**
+- Serverless compute
+- No always-on clusters
+- Partitioned Parquet storage
+- Auto-scaling Spark workloads
+- S3 lifecycle management
 
-Goal:
-
-Enable **AI-assisted data exploration on top of data lakes**.
-
-Read more about this project [here](ai-orchestrated-big-data-analytics-aws/ai_data_analytics_mcp/README_AI_MCP_Lakehouse.md)
+**Demo pipeline run cost:**  
+≈ **$0.04 per execution**
 
 ---
 
+# 📊 Engineering Practices Demonstrated
 
-## 💰 Cost Optimization Focus
-
-All projects are designed to:
-
-- Run within AWS Free Tier (when possible)
-- Use serverless services to reduce operational overhead
-- Minimize idle compute costs
-- Apply S3 lifecycle policies
-
----
-
-## 📊 Engineering Principles Applied
-
-- Data partitioning strategy
-- Schema evolution awareness
-- Idempotent pipeline design
-- Event-driven architecture
+- Data lake architecture
+- Partitioned storage design
+- Idempotent ETL pipelines
+- Event-driven workflows
+- Cloud monitoring & logging
 - Infrastructure modularization
-- Cost-performance trade-offs
-- Security best practices (IAM roles, least privilege)
-
---
-
-## 🧠 What This Repository Demonstrates
-
-✔ Real-world cloud data architecture design  
-✔ Strong AWS ecosystem knowledge  
-✔ Production mindset (monitoring, logging, security)  
-✔ Clean Python engineering practices  
-✔ SQL optimization awareness  
-✔ Data modeling fundamentals  
+- Security best practices (IAM least privilege)
 
 ---
 
-## 🌍 Target Roles
+# 🎯 Target Roles
 
-- AWS Data Engineer  
-- Cloud Data Engineer  
-- Analytics Engineer  
-- Data Platform Engineer  
-- Big Data Engineer  
+This portfolio is focused on roles such as:
 
----
-
-## 📬 Contact
-
-If you're a recruiter or hiring manager and would like to discuss my experience or projects:
-
-- LinkedIn: https://www.linkedin.com/in/brunoaugustosouza/
-- Email: bruno.augusto.souza@outlook.com
-- Cel: +55(11)97298-3578
+- **AWS Data Engineer**
+- **Cloud Data Engineer**
+- **Data Platform Engineer**
+- **Big Data Engineer**
+- **Analytics Engineer**
 
 ---
 
+# 📬 Contact
+
+**LinkedIn**  
+https://www.linkedin.com/in/brunoaugustosouza/
+
+**Email**  
+bruno.augusto.souza@outlook.com
+
+**Phone**  
++55 (11) 97298-3578 ([Call me on Whatsapp](https://wa.me/5511972983578))
+
+---
+
+⭐ If you are a recruiter or hiring manager looking for **AWS-focused Data Engineers**, feel free to explore the projects.
