@@ -236,6 +236,20 @@ Techniques applied:
 
 ---
 
+![Architecture Diagram](job-market-analytics/architecture_diagram.png)
+
+### 🔄 Data Flow
+
+1.  Evenbridge triggers Lambda event every 30 minutes
+2.  Lambda fetch data from public API, transforms JSON → Parquet
+3.  Raw and curated data are stored on S3 bucket
+4.  Glue Data Catalog registers schema
+5.  Athena enables SQL-based analytics
+
+Read more about (here)[job-market-analytics/README.md]
+
+--
+
 # 📊 Engineering Practices Demonstrated
 
 - Data lake architecture
