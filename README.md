@@ -83,22 +83,20 @@ End-to-end **serverless big data pipeline** processing real-world ride-sharing d
 
 ### Architecture
 
-Raw Data (Lambda)
 
-↓
-S3 Data Lake (Bronze)
+```mermaid
 
-↓
-Spark Processing (EMR Serverless)
+A[Raw Data<br>AWS Lambda] --> B[S3 Data Lake<br>Bronze Layer]
 
-↓
-Curated Layer (Silver)
+B --> C[Spark Processing<br>EMR Serverless]
 
-↓
-AI Analytics Engine (MCP + LLM)
+C --> D[Curated Data<br>Silver Layer]
 
-↓
-Analytics Tables (Gold)
+D --> E[AI Analytics Engine<br>MCP + LLM]
+
+E --> F[Analytics Tables<br>Gold Layer]
+
+```
 
 
 ### Technologies
