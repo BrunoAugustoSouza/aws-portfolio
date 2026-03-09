@@ -59,6 +59,11 @@ resource "aws_cloudwatch_event_target" "stepfn_target" {
     trigger = "scheduled"
   })
 
+  retry_policy {
+    maximum_retry_attempts   = 3
+    maximum_event_age_in_seconds = 3600
+  }
+
   depends_on = [
     aws_iam_role_policy_attachment.eventbridge_attach
   ]
